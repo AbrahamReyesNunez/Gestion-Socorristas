@@ -1,7 +1,6 @@
 package com.abrahamreyes.gestor_turnos.model;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,6 +21,7 @@ import lombok.Setter;
 @Setter 
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "socorristas")
 public class Socorrista {
 
