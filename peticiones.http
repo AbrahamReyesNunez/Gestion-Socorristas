@@ -1,0 +1,46 @@
+### Listar todos
+GET http://localhost:8080/socorristas
+
+### Crear uno válido
+POST http://localhost:8080/socorristas
+Content-Type: application/json
+
+{
+  "nombre": "Lucía",
+  "apellidos": "Martín Gil",
+  "dni": "12345678A",
+  "telefono": "600111222",
+  "fechaCaducidadTitulo": "2027-06-30"
+}
+
+### Crear con datos inválidos (debe dar 400)
+POST http://localhost:8080/socorristas
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "apellidos": "Ruiz",
+  "dni": "123",
+  "fechaCaducidadTitulo": "2027-06-30"
+}
+
+### Buscar por id
+GET http://localhost:8080/socorristas/3
+
+### Buscar uno que no existe (debe dar 404)
+GET http://localhost:8080/socorristas/99
+
+### Actualizar
+PUT http://localhost:8080/socorristas/1
+Content-Type: application/json
+
+{
+  "nombre": "Lucía",
+  "apellidos": "Martín Gil",
+  "dni": "12345678A",
+  "telefono": "699999999",
+  "fechaCaducidadTitulo": "2028-06-30"
+}
+
+### Borrar
+DELETE http://localhost:8080/socorristas/1
